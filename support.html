@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Support page for Fazker (فَذَكِّرْ)." />
+  <meta name="theme-color" content="#0f5f53" />
+  <title>Fazker (فَذَكِّرْ) – Support</title>
+  <style>
+    :root {
+      --bg: #f8f5ec;
+      --surface: #fffdf7;
+      --surface-2: #f1ede2;
+      --text: #17221f;
+      --muted: #66716d;
+      --border: #ded7c7;
+      --green: #0f6658;
+      --green-dark: #0a4f45;
+      --gold: #b88a36;
+      --gold-soft: #ead9b5;
+      --shadow: 0 18px 50px rgba(20, 36, 31, .08);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(184, 138, 54, .08), transparent 28rem),
+        radial-gradient(circle at 90% 10%, rgba(15, 102, 88, .08), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--green); }
+
+    .page {
+      width: min(100% - 32px, 980px);
+      margin: 0 auto;
+      padding: 28px 0 64px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+      border: 1px solid rgba(184, 138, 54, .35);
+      border-radius: 28px;
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -70px -100px auto;
+      width: 240px;
+      height: 240px;
+      border: 1px solid rgba(255, 255, 255, .13);
+      border-radius: 50%;
+      box-shadow: 0 0 0 28px rgba(255,255,255,.04), 0 0 0 58px rgba(255,255,255,.025);
+    }
+
+    .brand {
+      margin: 0 0 4px;
+      font-size: clamp(30px, 5vw, 46px);
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .brand-ar {
+      color: #f5dfac;
+      font-family: "Geeza Pro", "Noto Naskh Arabic", "Noto Sans Arabic", Arial, sans-serif;
+    }
+
+    .tagline {
+      margin: 0;
+      color: rgba(255,255,255,.82);
+      font-size: 15px;
+    }
+
+    .language-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 18px 0 0;
+    }
+
+    .language-links a {
+      text-decoration: none;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      color: white;
+      border: 1px solid rgba(255,255,255,.16);
+      font-size: 14px;
+    }
+
+    .intro {
+      margin: 22px 0;
+      padding: 22px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 30px rgba(20, 36, 31, .045);
+      color: #34423d;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 38px 0 16px;
+      font-size: 24px;
+      line-height: 1.3;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 5px;
+      height: 28px;
+      border-radius: 999px;
+      background: linear-gradient(var(--gold), #d1aa60);
+      flex: 0 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      padding: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 7px 24px rgba(20, 36, 31, .04);
+    }
+
+    .card h3 {
+      margin: 0 0 7px;
+      font-size: 16px;
+      color: var(--green-dark);
+    }
+
+    .card p { margin: 0; color: #4e5b56; }
+
+    .feature-list,
+    .report-list {
+      margin: 0;
+      padding-left: 20px;
+      color: #4e5b56;
+    }
+
+    .feature-list li,
+    .report-list li { margin: 6px 0; }
+
+    .support-card {
+      padding: 20px 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      margin-bottom: 14px;
+    }
+
+    .support-card h3 {
+      margin: 0 0 7px;
+      font-size: 18px;
+      color: var(--green-dark);
+    }
+
+    .support-card p { margin: 0; color: #4e5b56; }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding: 22px;
+      border-radius: 18px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+    }
+
+    .contact-copy strong {
+      display: block;
+      color: var(--green-dark);
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .contact-copy span { color: var(--muted); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(15, 102, 88, .15);
+    }
+
+    .button:hover { background: var(--green-dark); }
+
+    .divider {
+      height: 1px;
+      border: 0;
+      margin: 48px 0;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+
+    .arabic {
+      direction: rtl;
+      text-align: right;
+      font-family: "Geeza Pro", "Noto Naskh Arabic", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+    }
+
+    .arabic .feature-list,
+    .arabic .report-list {
+      padding-left: 0;
+      padding-right: 20px;
+    }
+
+    .footer {
+      margin-top: 34px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer .mark {
+      display: inline-block;
+      color: var(--gold);
+      margin: 0 4px;
+    }
+
+    @media (max-width: 700px) {
+      .page { width: min(100% - 20px, 980px); padding-top: 12px; }
+      .hero { padding: 26px 22px; border-radius: 22px; }
+      .grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 21px; margin-top: 30px; }
+      .intro, .card, .support-card, .contact { padding: 18px; }
+      .contact { align-items: stretch; }
+      .button { width: 100%; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1816;
+        --surface: #15221f;
+        --surface-2: #1b2925;
+        --text: #f4f1e7;
+        --muted: #a9b5b0;
+        --border: #2b3a35;
+        --green: #197b69;
+        --green-dark: #88c9bb;
+        --gold: #d2aa5d;
+        --gold-soft: #69552f;
+        --shadow: 0 18px 50px rgba(0, 0, 0, .22);
+      }
+
+      body { background: #0f1816; }
+      .intro, .card p, .support-card p, .feature-list, .report-list { color: #ccd6d2; }
+      .hero { background: linear-gradient(135deg, #0d4a41, #126858); }
+      .button { color: white; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <h1 class="brand">Fazker <span class="brand-ar">(فَذَكِّرْ)</span></h1>
+      <p class="tagline">Support · الدعم</p>
+      <nav class="language-links" aria-label="Language navigation">
+        <a href="#english">English</a>
+        <a href="#arabic">العربية</a>
+      </nav>
+    </header>
+
+    <section id="english" lang="en">
+      <p class="intro">
+        Need help with Fazker, have a suggestion, or want to report a problem? This page covers the
+        most common support topics and the best way to contact us.
+      </p>
+
+      <h2 class="section-title">Contact Support</h2>
+      <div class="contact">
+        <div class="contact-copy">
+          <strong>Email Support</strong>
+          <span>We’ll do our best to respond as soon as possible.</span>
+        </div>
+        <a class="button" href="mailto:iosayed1@gmail.com">iosayed1@gmail.com</a>
+      </div>
+
+      <h2 class="section-title">Main Features</h2>
+      <div class="grid">
+        <article class="card"><h3>Quran</h3><p>Read the Quran and listen to supported Ayah recitations.</p></article>
+        <article class="card"><h3>Azkar</h3><p>Access daily Azkar and remembrance content.</p></article>
+        <article class="card"><h3>Prayer Times</h3><p>View prayer times based on your location and settings.</p></article>
+        <article class="card"><h3>Qibla</h3><p>Find the Qibla direction using your location and device compass.</p></article>
+        <article class="card"><h3>Tasbeeh</h3><p>Use a customizable digital Tasbeeh for your preferred Dhikr.</p></article>
+        <article class="card"><h3>Reminders</h3><p>Enable prayer, Adhan, and Dhikr reminders as supported by your device.</p></article>
+      </div>
+
+      <h2 class="section-title">Common Help</h2>
+      <article class="support-card"><h3>Prayer times look incorrect</h3><p>Check that Location Services are enabled and that Fazker has permission to use your location. Also review your prayer calculation settings if available.</p></article>
+      <article class="support-card"><h3>Qibla is not accurate</h3><p>Make sure Location Services are enabled and your device compass is available. Moving the phone in a figure-eight motion can help recalibrate the compass.</p></article>
+      <article class="support-card"><h3>Notifications are not arriving</h3><p>Check notification permission, reminder settings, Focus or Do Not Disturb settings, and battery-saving restrictions on Android.</p></article>
+      <article class="support-card"><h3>Audio does not play</h3><p>Check your internet connection for uncached recitations and confirm that the selected reciter supports the requested playback mode.</p></article>
+
+      <h2 class="section-title">Report a Bug</h2>
+      <div class="card">
+        <p style="margin-top:0;color:#4e5b56;">When reporting a problem, please include:</p>
+        <ul class="report-list">
+          <li>Device model</li>
+          <li>iOS or Android version</li>
+          <li>Fazker app version</li>
+          <li>A short description of the issue</li>
+          <li>Screenshots, if relevant</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section id="arabic" lang="ar" class="arabic">
+      <p class="intro">
+        إذا واجهتك مشكلة في تطبيق فَذَكِّرْ، أو لديك اقتراح، أو تريد الإبلاغ عن خطأ، ستجد هنا أهم
+        خطوات المساعدة وطريقة التواصل معنا.
+      </p>
+
+      <h2 class="section-title">التواصل مع الدعم</h2>
+      <div class="contact">
+        <div class="contact-copy">
+          <strong>البريد الإلكتروني</strong>
+          <span>سنحاول الرد عليك في أقرب وقت ممكن.</span>
+        </div>
+        <a class="button" href="mailto:iosayed1@gmail.com">iosayed1@gmail.com</a>
+      </div>
+
+      <h2 class="section-title">أهم المميزات</h2>
+      <div class="grid">
+        <article class="card"><h3>القرآن الكريم</h3><p>قراءة القرآن والاستماع إلى تلاوات الآيات المتاحة.</p></article>
+        <article class="card"><h3>الأذكار</h3><p>الوصول إلى الأذكار اليومية ومحتوى الذكر.</p></article>
+        <article class="card"><h3>مواقيت الصلاة</h3><p>عرض مواقيت الصلاة حسب موقعك وإعدادات الحساب.</p></article>
+        <article class="card"><h3>القبلة</h3><p>تحديد اتجاه القبلة باستخدام الموقع وبوصلة الجهاز.</p></article>
+        <article class="card"><h3>السبحة</h3><p>سبحة إلكترونية قابلة للتخصيص للذكر الذي تختاره.</p></article>
+        <article class="card"><h3>التنبيهات</h3><p>تنبيهات الصلاة والأذان والذكر حسب ما يدعمه جهازك.</p></article>
+      </div>
+
+      <h2 class="section-title">مساعدة سريعة</h2>
+      <article class="support-card"><h3>مواقيت الصلاة غير دقيقة</h3><p>تأكد من تفعيل خدمات الموقع ومنح تطبيق فَذَكِّرْ إذن استخدام موقعك، وراجع إعدادات طريقة حساب مواقيت الصلاة إن كانت متاحة.</p></article>
+      <article class="support-card"><h3>اتجاه القبلة غير دقيق</h3><p>تأكد من تفعيل خدمات الموقع وتوفر بوصلة الجهاز. قد يساعد تحريك الهاتف على شكل رقم 8 في إعادة معايرة البوصلة.</p></article>
+      <article class="support-card"><h3>الإشعارات لا تصل</h3><p>راجع إذن الإشعارات وإعدادات التنبيهات ووضع التركيز أو عدم الإزعاج، بالإضافة إلى قيود توفير البطارية على أندرويد.</p></article>
+      <article class="support-card"><h3>الصوت لا يعمل</h3><p>تحقق من اتصال الإنترنت للتلاوات غير المخزنة مؤقتًا، وتأكد من أن القارئ المختار يدعم نوع التشغيل المطلوب.</p></article>
+
+      <h2 class="section-title">الإبلاغ عن مشكلة</h2>
+      <div class="card">
+        <p style="margin-top:0;color:#4e5b56;">يفضّل إرفاق المعلومات التالية:</p>
+        <ul class="report-list">
+          <li>نوع الجهاز</li>
+          <li>إصدار iOS أو Android</li>
+          <li>إصدار تطبيق فَذَكِّرْ</li>
+          <li>وصف مختصر للمشكلة</li>
+          <li>صور للشاشة إن وجدت</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">فَذَكِّرْ <span class="mark">◆</span> رَفِيقُ دَرْبِكَ</footer>
+  </main>
+</body>
+</html>
